@@ -5,5 +5,7 @@ package co.edu.uniquindio.poo;
  *
  */
 public enum Tipovehiculo {
-    
+    CARRO, 
+    CAMIONETA,
+    MOTO
 }
