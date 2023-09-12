@@ -7,7 +7,10 @@
  */
 package co.edu.uniquindio.poo;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
+import java.time.LocalDateTime;
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +26,12 @@ public class AppTest {
     @Test
     public void shouldAnswerWithTrue() {
         LOG.info("Iniciado test shouldAnswerWithTrue");
-        assertTrue(true);
+         Contacto contactoAnna= new Contacto("Anna", "12345678", "ana@uqvirtua.edu.co");
+         Vehiculo vehiculoAnna= new Vehiculo("ABC-123", Tipovehiculo.CAMIONETA, contactoAnna);
+         Registrolavado registrolavadoAnna = new Registrolavado(LocalDateTime.of(2006, 5, 31, 3, 8, 0), LocalDateTime.of(2006, 6, 4, 3, 0, 0), Tipolavado.DELUX, vehiculoAnna);
+
+         assertEquals(80000, registrolavadoAnna.CalcularCostoLavado());
+         assertEquals("Anna", contactoAnna.nombre());
         LOG.info("Finalizando test shouldAnswerWithTrue");
     }
 }

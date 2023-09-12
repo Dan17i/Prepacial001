@@ -25,6 +25,7 @@ public record Registrolavado( LocalDateTime fechaHE, LocalDateTime fechaHS, Tipo
                      valor=60000;
                     break;
             }
+             break;
         case CAMIONETA:
               switch (tipolavado) {
                 case SIMPLE:
@@ -37,6 +38,7 @@ public record Registrolavado( LocalDateTime fechaHE, LocalDateTime fechaHS, Tipo
                      valor= 80000;
                     break;
               }
+               break;
         case MOTO:
                switch (tipolavado) {
                 case SIMPLE:
@@ -48,6 +50,7 @@ public record Registrolavado( LocalDateTime fechaHE, LocalDateTime fechaHS, Tipo
                 case DELUX:
                      valor= 20000 ;
       }
+       break;
     }
       return valor;
   }
