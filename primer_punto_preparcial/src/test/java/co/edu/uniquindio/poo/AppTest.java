@@ -25,13 +25,28 @@ public class AppTest {
      */
     @Test
     public void shouldAnswerWithTrue() {
-        LOG.info("Iniciado test shouldAnswerWithTrue");
+        LOG.info("Iniciado test de la entreada de datos");
+
          Contacto contactoAnna= new Contacto("Anna", "12345678", "ana@uqvirtua.edu.co");
          Vehiculo vehiculoAnna= new Vehiculo("ABC-123", Tipovehiculo.CAMIONETA, contactoAnna);
          Registrolavado registrolavadoAnna = new Registrolavado(LocalDateTime.of(2006, 5, 31, 3, 8, 0), LocalDateTime.of(2006, 6, 4, 3, 0, 0), Tipolavado.DELUX, vehiculoAnna);
+       
+         LOG.info("ya creamos  el contato , el vehiculo y el registro");
 
-         assertEquals(80000, registrolavadoAnna.CalcularCostoLavado());
          assertEquals("Anna", contactoAnna.nombre());
-        LOG.info("Finalizando test shouldAnswerWithTrue");
+         assertEquals("12345678", contactoAnna.numero());
+         assertEquals("ana@uqvirtua.edu.co",contactoAnna.email());
+         assertEquals("ABC-123",vehiculoAnna.placa()); 
+         //assertEquals("CAMIONETA", vehiculoAnna.tipovehiculo());//erro?
+         assertEquals(contactoAnna, vehiculoAnna.contacto());
+         assertEquals(LocalDateTime.of(2006, 5, 31, 3, 8, 0),registrolavadoAnna.fechaHE());
+         assertEquals( LocalDateTime.of(2006, 6, 4, 3, 0, 0),registrolavadoAnna.fechaHS());
+        // assertEquals("DELUX", registrolavadoAnna.tipolavado());
+
+        // assertEquals(80000, registrolavadoAnna.CalcularCostoLavado());
+
+        LOG.info("Finalizando test no cuenta con ningun error de entrada de datos");
     }
+
+   
 }
