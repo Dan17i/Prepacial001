@@ -2,7 +2,7 @@ package co.edu.uniquindio.poo;
 
 import java.time.LocalDateTime;
 
-public record Registrolavado(int costolavado, LocalDateTime fechaHE, LocalDateTime fechaHS, Tipolavado tipolavado, Vehiculo vehiculo){
+public record Registrolavado( LocalDateTime fechaHE, LocalDateTime fechaHS, Tipolavado tipolavado, Vehiculo vehiculo){
 
     /**
      * @return
