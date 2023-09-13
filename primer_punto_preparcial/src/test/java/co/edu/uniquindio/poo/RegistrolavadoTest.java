@@ -17,7 +17,9 @@ public void CalcularCostoLavado (){
       Vehiculo vehiculoAnna= new Vehiculo("ABC-123", Tipovehiculo.CAMIONETA, contactoAnna);
       Registrolavado registrolavadoAnna = new Registrolavado(LocalDateTime.of(2006, 5, 31, 3, 8, 0), LocalDateTime.of(2006, 6, 4, 3, 0, 0), Tipolavado.DELUX, vehiculoAnna);
     LOG.info(" realizando evaluación ");
-      assertEquals("80000", registrolavadoAnna.CalcularCostoLavado());// error?
+
+    assertEquals(80000, registrolavadoAnna.CalcularCostoLavado());
+
     LOG.info(" fin del test ");
 }
 
