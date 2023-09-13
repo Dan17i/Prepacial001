@@ -37,11 +37,11 @@ public class AppTest {
          assertEquals("12345678", contactoAnna.numero());
          assertEquals("ana@uqvirtua.edu.co",contactoAnna.email());
          assertEquals("ABC-123",vehiculoAnna.placa()); 
-         //assertEquals("CAMIONETA", vehiculoAnna.tipovehiculo());//erro?
+         assertEquals(Tipovehiculo.CAMIONETA, vehiculoAnna.tipovehiculo());
          assertEquals(contactoAnna, vehiculoAnna.contacto());
          assertEquals(LocalDateTime.of(2006, 5, 31, 3, 8, 0),registrolavadoAnna.fechaHE());
          assertEquals( LocalDateTime.of(2006, 6, 4, 3, 0, 0),registrolavadoAnna.fechaHS());
-        // assertEquals("DELUX", registrolavadoAnna.tipolavado());
+         assertEquals(Tipolavado.DELUX, registrolavadoAnna.tipolavado());
 
         // assertEquals(80000, registrolavadoAnna.CalcularCostoLavado());
 
