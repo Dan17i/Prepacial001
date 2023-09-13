@@ -9,7 +9,7 @@ public record Registrolavado( LocalDateTime fechaHE, LocalDateTime fechaHS, Tipo
      */
     public int CalcularCostoLavado (){
       
-        int valor  =0;
+        int valor =0;
       Tipovehiculo tipovehiculo= vehiculo.tipovehiculo();
 
       switch (tipovehiculo) {
