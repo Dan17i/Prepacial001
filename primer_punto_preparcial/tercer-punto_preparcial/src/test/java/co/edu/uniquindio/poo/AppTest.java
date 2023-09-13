@@ -7,9 +7,15 @@
  */
 package co.edu.uniquindio.poo;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.time.LocalDate;
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
+
+import main.java.co.edu.uniquindio.poo.Marca;
+import main.java.co.edu.uniquindio.poo.Tipoproducto;
 
 /**
  * Unit test for simple App.
@@ -23,7 +29,14 @@ public class AppTest {
     @Test
     public void shouldAnswerWithTrue() {
         LOG.info("Iniciado test shouldAnswerWithTrue");
-        assertTrue(true);
+        
+        Marca marcaNueva = new Marca("Diana", "www.Diana.com", "Diana@gamil.co");
+        Producto productoNuevo =new Producto("Arroz", LocalDate.of(2024, 5, 3), (float)2000, marcaNueva,Tipoproducto.NACIONAL);
+
+       assertEquals("Diana",marcaNueva.nombre());
+       assertEquals("www.Diana.com", marcaNueva.web());
+       
+
         LOG.info("Finalizando test shouldAnswerWithTrue");
     }
 }
