@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 public class MaquinaEspendedoraTest {
     private static final Logger LOG = Logger.getLogger(AppTest.class.getName());
 
+    
     @Test
     public void datosCompletos(){
 
