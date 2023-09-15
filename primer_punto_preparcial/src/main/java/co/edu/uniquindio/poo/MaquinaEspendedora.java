@@ -15,8 +15,7 @@ public MaquinaEspendedora{
     assert valorPagar >=0;
     assert valorPagado>=0;
     assert valorPagado>valorPagado;
-    //assert valorPagar != null; 
-    //assert valorPagado != null;
+
  }
 
 }
